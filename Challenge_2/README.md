@@ -6,4 +6,4 @@
   - /metadata/instance => VM metadata
   - /metadata/identity => A managed identity via IMDS
 
-#### By deafult, IMDS never leaves the host, thsi will work within the azure vm
+#### By deafult, IMDS never leaves the host, this will work within the azure vm

@@ -41,6 +41,7 @@ module "compute"{
   rg_name   = var.resource_group_name
   subnet_id = each.value.subnet_id
   prefix    = local.prefix
+  avset_name = "devavset"
 
   depends_on = [module.network]  
 

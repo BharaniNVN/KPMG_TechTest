@@ -92,3 +92,8 @@ variable "prefix" {
     type = string
     default = ""
 }
+
+variable "avset_name" {
+    type = string
+    default = ""
+}

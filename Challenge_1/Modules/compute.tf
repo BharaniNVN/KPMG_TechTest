@@ -24,6 +24,7 @@ resource "azurerm_virtual_machine" "vm" {
   resource_group_name = var.resource_group_name
   network_interface_ids = [azurerm_network_interface.nic.id]
   vm_size               = var.vm_size
+  availability_set_id = azurerm_availability_set.vm_avset.id
 
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
@@ -47,4 +48,12 @@ resource "azurerm_virtual_machine" "vm" {
     disable_password_authentication = false
   }
 
+  depends_on = [azurerm_availability_set.vm_avset]
+
+}
+
+resource "azurerm_availability_set" "vm_avset" {
+  name                = var.avset_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
 }

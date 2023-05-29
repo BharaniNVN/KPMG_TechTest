@@ -39,9 +39,9 @@ resource "azurerm_virtual_machine" "vm" {
   }
 
   os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    computer_name  = "${var.prefix}-${var.vm_name}"
+    admin_username = var.local_username
+    admin_password = var.local_password
   }
 
   os_profile_linux_config {

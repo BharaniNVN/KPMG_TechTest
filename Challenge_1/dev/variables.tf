@@ -68,4 +68,14 @@ variable "nsg_id"{
     default = ""
 }
 
+variable "username"{
+    type = string
+    default = ""
+}
+
+variable "password"{
+    type = string
+    default = ""
+}
+
 

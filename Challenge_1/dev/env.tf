@@ -42,6 +42,8 @@ module "compute"{
   subnet_id = each.value.subnet_id
   prefix    = local.prefix
   avset_name = "devavset"
+  local_username = var.username
+  local_password = var.password
 
   depends_on = [module.network]  
 

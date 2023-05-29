@@ -97,3 +97,13 @@ variable "avset_name" {
     type = string
     default = ""
 }
+
+variable "local_username" {
+    type = string
+    default = ""
+}
+
+variable "local_password" {
+    type = string
+    default = ""
+}
